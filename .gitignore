@@ -120,3 +120,11 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/vim,ruby,java,gradle
+
+.env
+*.swp
+tmp
+
+.digdag
+.digdag-wrapper
+*.pyc

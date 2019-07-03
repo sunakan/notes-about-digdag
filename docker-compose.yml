@@ -1,0 +1,19 @@
+---
+
+version: "3.7"
+
+services:
+  digdag:
+    command: bash
+    tty: true
+    working_dir: /usr/local/my-digdag
+    image: my-digdag
+    build:
+      context: containers/digdag
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/local/my-digdag
+    environment:
+      SLACK_INCOMING_WEBHOOK_URL: $SLACK_INCOMING_WEBHOOK_URL
+      ENV: ${ENV}
+      TZ: Asia/Tokyo
